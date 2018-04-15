@@ -1,0 +1,20 @@
+
+// Form 
+
+.form {
+  &__label--hidden {
+    display: none;
+  }
+  &__input {
+    @extend %input;
+    margin: auto;
+    margin-bottom: em(30px);
+    &::placeholder {
+      padding-left: em(10px);
+    }
+  }
+}
+
+.form .btn--default {
+  width: 100%;
+}

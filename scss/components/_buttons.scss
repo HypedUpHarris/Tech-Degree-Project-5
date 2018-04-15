@@ -1,0 +1,27 @@
+
+// Background color
+
+.btn {
+  @include bg-colors($ui-colors);
+}
+
+
+[class^="btn--"] {
+  text-align: center;
+  @extend %btn; 
+  margin-top: em(20px);
+  color: $white;
+  padding: 1px 0 0 0; 
+  @include mq($brk-desktop) {
+    width: 15%;
+  }
+}
+
+
+
+@include mq($brk-desktop) {
+  .grid__col--12 {
+    @include flexy($dir: row);
+    justify-content: space-around;
+  }
+}

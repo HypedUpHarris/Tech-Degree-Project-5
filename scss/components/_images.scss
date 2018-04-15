@@ -1,0 +1,23 @@
+
+// Img
+
+.img {
+  &--logo {
+    @extend %img;
+    margin: em(40px) auto;
+    @include mq($brk-desktop) {
+      margin-left: auto;
+    }
+  }
+  &--avatar {
+    @extend %img;
+    margin: em(30px) auto;
+  }
+  &--frame {
+    width: 99%;
+    @extend %img;
+    border: 1px solid lighten(grey, 30%);
+    padding: em(15px);
+    margin-top: em(20px);
+  }
+}

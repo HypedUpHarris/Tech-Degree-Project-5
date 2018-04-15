@@ -1,0 +1,35 @@
+
+// Flex items
+
+.nav {
+  @include flexy($dir: column);
+  @include mq($brk-desktop) {
+    @include flexy($dir: row);
+    justify-content: flex-end;
+    margin-top: em(55px);
+  }
+}
+
+
+.nav {
+
+   &__item {
+     @extend %nav-items;
+     @include mq($brk-desktop) {
+       width: 16%;
+     }
+      &:first-child {
+        background-color: $color-primary;
+      }
+      &:first-child a {
+        color: $white;
+      }
+  a {
+      @extend %link;
+      display: block;
+      padding-top: em(18px);
+      color: grey;
+      font-weight: $font-weight--medium;
+    }
+  }
+}
